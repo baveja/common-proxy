@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="Fault.raiseFault400">
+    <DisplayName>Fault.raiseFault400</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            
+            <Payload contentType="application/json" variablePrefix="$" variableSuffix="#">
+            
+            {
+  "errors": {
+    "error": [
+      {
+        "code": "Facade-0001",
+        "userMessage": "Invalid Input Parameters",
+        "systemMessage": "Invalid Input Parameters - Missing Mandatory Payload"
+      }
+    ]
+  }
+}
+			</Payload>
+            <StatusCode>400</StatusCode>
+            <ReasonPhrase>Bad Request</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>
+
+
+  
